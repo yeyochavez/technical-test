@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title> Agregar estudiante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <div class="add-student">
+    <ion-progress-bar
+      *ngIf="isLoading"
+      type="indeterminate"
+      color="success"
+    ></ion-progress-bar>
+    <app-form-student
+      (studentEvent)="handlerStudent($event)"
+    ></app-form-student>
+    <ion-progress-bar
+      *ngIf="isLoading"
+      type="indeterminate"
+      color="success"
+    ></ion-progress-bar>
+    <!-- start: message error -->
+    <p class="add-student__message-error">{{ messageError }}</p>
+    <!-- end: message error -->
+
+    <ion-button
+      class="add-student__button"
+      color="light"
+      (click)="handlerLogOut()"
+    >
+      Cerrar sesión
+    </ion-button>
+  </div>
+</ion-content>

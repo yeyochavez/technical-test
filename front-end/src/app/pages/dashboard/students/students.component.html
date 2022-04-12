@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title> Estudiantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <!-- start: filter students -->
+  <div class="students__filter">
+    <ion-button
+      shape="round"
+      size="small"
+      color="success"
+      (click)="handlerRefresh()"
+    >
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+    <ion-item class="students__input">
+      <ion-input
+        placeholder="Buscar por grado"
+        type="number"
+        (keyup.enter)="handlerSearch($event)"
+        (ionBlur)="handlerSearch($event)"
+      ></ion-input>
+    </ion-item>
+    <ion-button
+      shape="round"
+      size="small"
+      color="light"
+      (click)="handlerClear()"
+    >
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </div>
+  <!-- end: filter students -->
+  <ion-progress-bar *ngIf="isLoading" type="indeterminate" color="success"></ion-progress-bar>
+  <app-list-students [students]="filterStudent"></app-list-students>
+  <ion-progress-bar *ngIf="isLoading" type="indeterminate" color="success"></ion-progress-bar>
+</ion-content>

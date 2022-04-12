@@ -1,0 +1,34 @@
+<ion-card color="dark">
+  <ion-card-header>
+    <ion-card-subtitle> Nombre estudiante </ion-card-subtitle>
+    <ion-card-title>{{ student.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p class="information-student__subtitle">Datos basicos</p>
+    <ul class="information-student__list">
+      <li class="information-student__item">
+        <span>Nombre del padre:</span><br />
+        {{ student.fatherName }}
+      </li>
+      <li class="information-student__item">
+        <span>Nombre de la madre:</span><br />
+        {{ student.motherName }}
+      </li>
+      <li class="information-student__item">
+        <span>Fecha nacimiento:</span><br />
+        {{ student.dateBirth | date: "yyyy-MM-dd" }}
+      </li>
+    </ul>
+    <p class="information-student__subtitle">Datos Academicos</p>
+    <ul class="information-student__list">
+      <li class="information-student__item">
+        <span>Grado:</span>{{ student.degree }}
+      </li>
+      <li class="information-student__item">
+        <span>Fecha ingreso:</span> <br />{{
+          student.dateEntry | date: "yyyy-MM-dd"
+        }}
+      </li>
+    </ul>
+  </ion-card-content>
+</ion-card>

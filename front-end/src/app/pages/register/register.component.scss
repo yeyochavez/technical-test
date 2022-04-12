@@ -1,0 +1,88 @@
+ion-content {
+  --ion-bakcground-color: #fff;
+}
+
+.register {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../../assets/img/background_login.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register__wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.register__shape {
+  position: fixed;
+  top: 0;
+  right: 0;
+  img {
+    opacity: 0.9;
+  }
+}
+
+.register__card {
+  margin-top: 130px;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+.register__title {
+  color: #242020;
+  font-size: 30px;
+}
+
+.register__subtitle {
+  color: #bbbbbb;
+  font-size: 14px;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #198645;
+    font-size: 15px;
+  }
+}
+
+.register__content {
+  margin-top: 30px;
+}
+
+.register__input {
+  --ion-item-background: transparent;
+  --border-width: 0;
+  --inner-border-width: 0;
+  --highlight-color-focused: none;
+  margin-bottom: 15px;
+
+  ion-input {
+    width: 247px;
+    height: 42px;
+    border-radius: 15px;
+    border: 1px solid #198645;
+    font-size: 14px;
+    font-weight: 300;
+    color: #555b5b;
+    --padding-start: 30px;
+  }
+}
+
+.register__button {
+  height: 53px;
+  width: 247px;
+  font-size: 14px;
+  text-transform: none;
+  --background: #198645;
+  font-weight: 300;
+  --border-radius: 15px !important;
+  color: #fff;
+}

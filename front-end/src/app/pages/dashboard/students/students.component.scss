@@ -1,0 +1,24 @@
+.students__filter {
+  --ion-item-background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 10px;
+  width: 90%;
+}
+
+.students__input {
+  --border-width: 0;
+  --inner-border-width: 0;
+  --highlight-color-focused: none;
+
+  ion-input {
+    width: 247px;
+    border-radius: 15px;
+    border: 1px solid #198645;
+    font-size: 14px;
+    font-weight: 300;
+    color: #555b5b;
+    --padding-start: 10px;
+  }
+}

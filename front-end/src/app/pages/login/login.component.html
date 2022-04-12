@@ -1,0 +1,71 @@
+<ion-content>
+  <div class="login">
+    <div class="login__wrapper">
+      <!-- start: shape -->
+      <div class="login__shape">
+        <img src="../../../assets/img/shape.svg" alt="Green shape" />
+      </div>
+      <!-- end: shape -->
+      <ion-card class="login__card">
+        <!-- start: header -->
+        <ion-card-header>
+          <ion-card-title class="login__title"> Bienvenido! </ion-card-title>
+          <ion-card-subtitle class="login__subtitle">
+            Si aún no tienes cuenta<a href="register"> Registrate </a>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <!-- end: header -->
+
+        <!-- start: login content -->
+        <ion-card-content class="login__content">
+          <ion-progress-bar
+            *ngIf="isLoading"
+            type="indeterminate"
+            color="success"
+          ></ion-progress-bar>
+
+          <!-- start: form -->
+          <form [formGroup]="userForm">
+            <ion-item class="login__input">
+              <ion-input
+                placeholder="Email"
+                type="email"
+                formControlName="email"
+              ></ion-input>
+            </ion-item>
+            <ion-item class="login__input">
+              <ion-input
+                placeholder="Clave"
+                type="password"
+                formControlName="password"
+              ></ion-input>
+            </ion-item>
+            <ion-button class="login__button" type="submit" (click)="signIn()">
+              Iniciar sesión
+            </ion-button>
+          </form>
+          <!-- end: form -->
+
+          <ion-progress-bar
+            *ngIf="isLoading"
+            type="indeterminate"
+            color="success"
+          ></ion-progress-bar>
+
+          <!-- start: message error -->
+          <p class="login__message-error">{{ messageError }}</p>
+          <!-- end: message error -->
+
+          <!-- start: footer -->
+          <div class="login__footer">
+            <span class="login__sign-in">
+              No tienes una cuenta aún? <a href="mainscreen"> Registrate</a>
+            </span>
+          </div>
+          <!-- end: footer -->
+        </ion-card-content>
+        <!-- end: login content -->
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

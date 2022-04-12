@@ -1,0 +1,16 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col
+      *ngFor="let student of students; let i = index"
+      size="12"
+      size-lg="3"
+      size-md="4"
+      size-sm="6"
+      size-xs="12"
+    >
+      <app-information-student
+        [student]="student"
+      ></app-information-student>
+    </ion-col>
+  </ion-row>
+</ion-grid>

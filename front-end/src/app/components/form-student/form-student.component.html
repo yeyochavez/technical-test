@@ -1,0 +1,44 @@
+<form class="form-student" [formGroup]="studentForm">
+  <p class="form-student__subtitle">
+    Diligencia los datos solicitados a continuación
+  </p>
+
+  <ion-item class="student__input">
+    <ion-input
+      placeholder="Nombre estudiante"
+      formControlName="name"
+    ></ion-input>
+  </ion-item>
+  <ion-item class="student__input">
+    <ion-input
+      placeholder="Nombre del padre"
+      formControlName="fatherName"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="student__input">
+    <ion-input
+      placeholder="Nombre de la madre"
+      formControlName="motherName"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="student__input">
+    <ion-input
+      placeholder="Grado academico"
+      formControlName="degree"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="student__input">
+    <ion-input
+      placeholder="Fecha nacimiento"
+      type="date"
+      formControlName="dateBirth"
+    ></ion-input>
+  </ion-item>
+
+  <ion-button class="student__button" type="submit" (click)="handlerSubmit()">
+    Ingresar estudiante
+  </ion-button>
+</form>
